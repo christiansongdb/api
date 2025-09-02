@@ -1,40 +1,40 @@
 # Christian Song Database API
-**EN** | [PT](README.md)
+**PT** | [EN](README-en.md)
 
-API for accessing information and content available in the Christian Song Database.<br/>
-By using the API you agree to the [Terms of Service](https://api.csdb.app/terms).<br/>
+API de acesso às informações e conteúdos disponíveis no banco de dados Christian Song Database.<br/>
+Ao utilizar a API você concorda com os [Termos de Serviço](https://api.csdb.app/terms).<br/>
 <br/>
 
-Christian Song Database (CSDB) is a public and open database of evangelical songs that was created with the aim of storing and concentrating reliable information in one place.<br>
-Stores the id/link of a song across different streaming services, maintaining the correct version compatible with each recording, reducing the risk of the song version in one streaming link being different from the song version in another streaming.<br>
-It also stores information about the songwriters, as well as relationships that may be interesting, such as the list of compositions by a particular person, the list of songs that use the same composition, what the original composition is when a song is translated from another language, etc.
+Christian Song Database (CSDB) é um banco de dados público e aberto de músicas evangélicas que foi criado com o objetivo de armazenar e concentrar informações confiáveis em um único local.<br>
+Armazena o id/link de uma música em diferentes serviços de streamings, mantendo a versão correta compatível com cada gravação, diminuindo o risco da versão da música no link de um streaming ser diferente da versão da música em outro streaming.<br>
+Armazena também informação dos compositores da música, além de relacionamentos que podem ser interessantes, como a lista de composições de uma determinada pessoa, a lista de músicas que usam a mesma composição, qual é a composição original quando é uma música traduzida de outro idioma, etc.
 
-Database download in csv format available at [files/database.zip](files/database.zip)<br/>
-Whenever possible, we recommend accessing the data through the API, as the data is regularly updated/corrected.
+Download do banco de dados em formato csv disponível em [files/database.zip](files/database.zip)<br/>
+Sempre que possível, recomendamos o acesso aos dados pela API, pois os dados são regularmente atualizados/corrigidos.
 
 ---
 
-To use the API, an authorization token is required<br/>
+Para utilização da API é necessário um token de autorização<br/>
 `Authorization: Bearer {token}`<br>
 
-To request an access token, please contact us at [csdb@csdb.app](mailto:csdb@csdb.app)
+Para solicitar um token de acesso, entre em contato pelo email [csdb@csdb.app](mailto:csdb@csdb.app)
 
 ---
 
 ## Request
-All API responses return a standard object:
-| Name | Type  | Description |
+Todas as respostas da API retornam um objeto padrão:
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `status` | _String_ | It might be *'ok'* or *'error'* |
-| `error` | _String (optional)_ | Error message if status equals *error* |
-| `result` | _Object (optional)_ | Response content if *status* equals *ok* |
+| `status` | _String_ | Pode ser *'ok'* ou *'error'* |
+| `error` | _String (opcional)_ | Mensagem de erro se *status* for igual a *error* |
+| `result` | _Object (opcional)_ | Conteúdo da resposta se *status* for igual a *ok* |
 
-default URL
+URL padrão
 ```
 https://api.csdb.app/v1/
 ```
 
-# Available endpoints 
+# Endpoints disponíveis 
   - [profile/{id}](#profileid)
   - [work/{id}](#workid)
   - [track/{id}](#trackid)
@@ -56,26 +56,26 @@ https://api.csdb.app/v1/
 ---
 
 ### profile/{id}
-Returns a profile
+Retorna um perfil
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `id` | _String_ | Profile ID |
+| `id` | _String_ | ID do perfil |
 
 
-**Response:**
+**Resposta:**
 
-| Type  |
+| Tipo  |
 | :---: |
 | _[Profile](#profile)_ | 
 
 
-**Example:** [` api.csdb.app/v1/profile/5450607 `](https://api.csdb.app/v1/profile/5450607)<br>
+**Exemplo:** [` api.csdb.app/v1/profile/5450607 `](https://api.csdb.app/v1/profile/5450607)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -138,26 +138,26 @@ Returns a profile
 ---
 
 ### work/{id}
-Returns a work
+Retorna uma obra
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `id` | _String_ | Work ID |
+| `id` | _String_ | ID da obra |
 
 
-**Response:**
+**Resposta:**
 
-| Type  |
+| Tipo  |
 | :---: |
 | _[Work](#work)_ | 
 
 
-**Example:** [` api.csdb.app/v1/work/8063427 `](https://api.csdb.app/v1/work/8063427)<br>
+**Exemplo:** [` api.csdb.app/v1/work/8063427 `](https://api.csdb.app/v1/work/8063427)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -199,26 +199,26 @@ Returns a work
 ---
 
 ### track/{id}
-Returns a song (recording)
+Retorna uma música (gravação)
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `id` | _String_ | Song ID |
+| `id` | _String_ | ID da música |
 
 
-**Response:**
+**Resposta:**
 
-| Type  |
+| Tipo  |
 | :---: |
 | _[Track](#track)_ | 
 
 
-**Example:** [` api.csdb.app/v1/track/3165776 `](https://api.csdb.app/v1/track/3165776)<br>
+**Exemplo:** [` api.csdb.app/v1/track/3165776 `](https://api.csdb.app/v1/track/3165776)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -333,33 +333,33 @@ Returns a song (recording)
 ---
 
 ### profile/{id}/tracks
-Returns the list of songs from a profile
+Retorna a lista de músicas de um perfil
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `id` | _String_ | Song ID |
-| `limit` | _Number (optional)_ | `1 ~ 100` `Default: 10` |
-| `page` | _Number (optional)_ |  `Default: 1` |
-| `order` | _String (optional)_ | Sorting mode of the items.<br>It can be: `title` `popularity` `date` `date_descending` `Default: title` |
+| `id` | _String_ | ID da música |
+| `limit` | _Number (opcional)_ | `1 ~ 100` `Padrão: 10` |
+| `page` | _Number (opcional)_ |  `Padrão: 1` |
+| `order` | _String (opcional)_ | Modo de ordenação dos items.<br>Pode ser: `title` `popularity` `date` `date_descending` `Padrão: title` |
 
 
-**Response:**
+**Resposta:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
 | `tracks` | _Array&lt;[Track](#track)&gt;_ |  |
 | `limit` | _Number_ |  |
 | `page` | _Number_ |  |
 | `order` | _String_ |  |
-| `total` | _Number_ | Total number of available items |
+| `total` | _Number_ | Total de itens disponíveis |
 
 
-**Example:** [` api.csdb.app/v1/profile/5450607/tracks?limit=10&page=1&order=popularity `](https://api.csdb.app/v1/profile/5450607/tracks?limit=10&page=1&order=popularity)<br>
+**Exemplo:** [` api.csdb.app/v1/profile/5450607/tracks?limit=10&page=1&order=popularity `](https://api.csdb.app/v1/profile/5450607/tracks?limit=10&page=1&order=popularity)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -442,33 +442,33 @@ Returns the list of songs from a profile
 ---
 
 ### profile/{id}/works
-Returns the list of compositions of a profile
+Retorna a lista de composições de um perfil
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `id` | _String_ | Work ID |
-| `limit` | _Number (optional)_ | `1 ~ 100` `Default: 10` |
-| `page` | _Number (optional)_ |  `Default: 1` |
-| `order` | _String (optional)_ | Sorting mode of the items.<br>It can be: `title` `popularity` `date` `date_descending` `Default: title` |
+| `id` | _String_ | ID da obra |
+| `limit` | _Number (opcional)_ | `1 ~ 100` `Padrão: 10` |
+| `page` | _Number (opcional)_ |  `Padrão: 1` |
+| `order` | _String (opcional)_ | Modo de ordenação dos items.<br>Pode ser: `title` `popularity` `date` `date_descending` `Padrão: title` |
 
 
-**Response:**
+**Resposta:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
 | `works` | _[Work](#work)_ |  |
 | `limit` | _Number_ |  |
 | `page` | _Number_ |  |
 | `order` | _String_ |  |
-| `total` | _Number_ | Total number of available items |
+| `total` | _Number_ | Total de itens disponíveis |
 
 
-**Example:** [` api.csdb.app/v1/profile/5450607/works?limit=10&page=1&order=popularity `](https://api.csdb.app/v1/profile/5450607/works?limit=10&page=1&order=popularity)<br>
+**Exemplo:** [` api.csdb.app/v1/profile/5450607/works?limit=10&page=1&order=popularity `](https://api.csdb.app/v1/profile/5450607/works?limit=10&page=1&order=popularity)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -558,31 +558,31 @@ Returns the list of compositions of a profile
 ---
 
 ### work/{id}/recordings
-Returns the list of recordings of the respective work
+Retorna a lista de gravações da respectiva obra
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `id` | _String_ | Work ID |
-| `limit` | _Number (optional)_ | `1 ~ 100` `Default: 10` |
-| `page` | _Number (optional)_ |  `Default: 1` |
+| `id` | _String_ | ID da obra |
+| `limit` | _Number (opcional)_ | `1 ~ 100` `Padrão: 10` |
+| `page` | _Number (opcional)_ |  `Padrão: 1` |
 
 
-**Response:**
+**Resposta:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
 | `recordings` | _[Track](#track)_ |  |
 | `limit` | _Number_ |  |
 | `page` | _Number_ |  |
-| `total` | _Number_ | Total number of available items |
+| `total` | _Number_ | Total de itens disponíveis |
 
 
-**Example:** [` api.csdb.app/v1/work/8063427/recordings?limit=10&page=1 `](https://api.csdb.app/v1/work/8063427/recordings?limit=10&page=1)<br>
+**Exemplo:** [` api.csdb.app/v1/work/8063427/recordings?limit=10&page=1 `](https://api.csdb.app/v1/work/8063427/recordings?limit=10&page=1)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -704,31 +704,31 @@ Returns the list of recordings of the respective work
 ---
 
 ### work/{id}/versions
-Returns the list of derivative works (versions) of the respective work
+Retorna a lista de obras derivadas (versões) da respectiva obra
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `id` | _String_ | Work ID |
-| `limit` | _Number (optional)_ | `1 ~ 100` `Default: 10` |
-| `page` | _Number (optional)_ |  `Default: 1` |
+| `id` | _String_ | ID da obra |
+| `limit` | _Number (opcional)_ | `1 ~ 100` `Padrão: 10` |
+| `page` | _Number (opcional)_ |  `Padrão: 1` |
 
 
-**Response:**
+**Resposta:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
 | `versions` | _[Work](#work)_ |  |
 | `limit` | _Number_ |  |
 | `page` | _Number_ |  |
-| `total` | _Number_ | Total number of available items |
+| `total` | _Number_ | Total de itens disponíveis |
 
 
-**Example:** [` api.csdb.app/v1/work/7269270/versions?limit=10&page=1 `](https://api.csdb.app/v1/work/7269270/versions?limit=10&page=1)<br>
+**Exemplo:** [` api.csdb.app/v1/work/7269270/versions?limit=10&page=1 `](https://api.csdb.app/v1/work/7269270/versions?limit=10&page=1)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -839,33 +839,33 @@ Returns the list of derivative works (versions) of the respective work
 ---
 
 ### work/{id}/recordings_and_versions
-Returns the list of recordings and the list of derivative works (versions) of the respective work
+Retorna a lista de gravações e a lista de obras derivadas (versões) da respectiva obra
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `id` | _String_ | Work ID |
-| `limit` | _Number (optional)_ | `1 ~ 100` `Default: 10` |
-| `page` | _Number (optional)_ |  `Default: 1` |
+| `id` | _String_ | ID da obra |
+| `limit` | _Number (opcional)_ | `1 ~ 100` `Padrão: 10` |
+| `page` | _Number (opcional)_ |  `Padrão: 1` |
 
 
-**Response:**
+**Resposta:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
 | `recordings` | _[Track](#track)_ |  |
 | `versions` | _[Work](#work)_ |  |
 | `limit` | _Number_ |  |
 | `page` | _Number_ |  |
-| `total_recordings` | _Number_ | Total number of recordings available |
-| `total_versions` | _Number_ | Total number of available versions |
+| `total_recordings` | _Number_ | Total de gravações disponíveis |
+| `total_versions` | _Number_ | Total de versões disponíveis |
 
 
-**Example:** [` api.csdb.app/v1/work/7269270/recordings_and_versions?limit=10&page=1 `](https://api.csdb.app/v1/work/7269270/recordings_and_versions?limit=10&page=1)<br>
+**Exemplo:** [` api.csdb.app/v1/work/7269270/recordings_and_versions?limit=10&page=1 `](https://api.csdb.app/v1/work/7269270/recordings_and_versions?limit=10&page=1)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -1036,26 +1036,26 @@ Returns the list of recordings and the list of derivative works (versions) of th
 ---
 
 ### track/{id}/alternative_versions
-Returns the list of recordings by the same artist that use the same composition
+Retorna a lista de gravações do mesmo artista que utilizam a mesma composição
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `id` | _String_ | Song ID |
+| `id` | _String_ | ID da música |
 
 
-**Response:**
+**Resposta:**
 
-| Name | Type  |
+| Nome | Tipo  |
 | ---- | :---: |
 | `alternative_versions` | _[Track](#track)_| 
 
 
-**Example:** [` api.csdb.app/v1/track/5099252/alternative_versions `](https://api.csdb.app/v1/track/5099252/alternative_versions)<br>
+**Exemplo:** [` api.csdb.app/v1/track/5099252/alternative_versions `](https://api.csdb.app/v1/track/5099252/alternative_versions)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -1181,27 +1181,27 @@ Returns the list of recordings by the same artist that use the same composition
 ---
 
 ### {external_link_type}/profile/{id}
-Returns the profile based on the ID of the respective external service
+Retorna o perfil com base no ID do respectivo serviço externo
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `external_link_type` | _String_ | It can be: `spotify` `youtube` `apple_music` `amazon_music` `deezer` |
+| `external_link_type` | _String_ | Pode ser: `spotify` `youtube` `apple_music` `amazon_music` `deezer` |
 | `id` | _String_ |  |
 
 
-**Response:**
+**Resposta:**
 
-| Type  |
+| Tipo  |
 | :---: |
 | _[Profile](#profile)_ | 
 
 
-**Example:** [` api.csdb.app/v1/spotify/profile/2aKyKSggb31Kw9s9i3iXoo `](https://api.csdb.app/v1/spotify/profile/2aKyKSggb31Kw9s9i3iXoo)<br>
+**Exemplo:** [` api.csdb.app/v1/spotify/profile/2aKyKSggb31Kw9s9i3iXoo `](https://api.csdb.app/v1/spotify/profile/2aKyKSggb31Kw9s9i3iXoo)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -1263,27 +1263,27 @@ Returns the profile based on the ID of the respective external service
 ---
 
 ### {external_link_type}/track/{id}
-Returns the song based on the ID of the respective external service
+Retorna a música com base no ID do respectivo serviço externo
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `external_link_type` | _String_ | It can be: `isrc` `spotify` `youtube` `apple_music` `amazon_music` `deezer` |
+| `external_link_type` | _String_ | Pode ser: `isrc` `spotify` `youtube` `apple_music` `amazon_music` `deezer` |
 | `id` | _String_ |  |
 
 
-**Response:**
+**Resposta:**
 
-| Type  |
+| Tipo  |
 | :---: |
 | _[Track](#track)_ | 
 
 
-**Example:** [` api.csdb.app/v1/spotify/track/1uoA57FMhP9QjZxIJZVEWo `](https://api.csdb.app/v1/spotify/track/1uoA57FMhP9QjZxIJZVEWo)<br>
+**Exemplo:** [` api.csdb.app/v1/spotify/track/1uoA57FMhP9QjZxIJZVEWo `](https://api.csdb.app/v1/spotify/track/1uoA57FMhP9QjZxIJZVEWo)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -1398,27 +1398,27 @@ Returns the song based on the ID of the respective external service
 ---
 
 ### popular/profile
-Returns the list of popular profiles
+Retorna a lista dos perfis populares
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `limit` | _Number (optional)_ | Maximum number of items returned. `1 ~ 100` `Default: 10` |
+| `limit` | _Number (opcional)_ | Quantidade máxima de itens retornados. `1 ~ 100` `Padrão: 10` |
 
 
-**Response:**
+**Resposta:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
 | `profiles` | _Array&lt;[Profile](#profile)&gt;_ |  |
 | `limit` | _Number_ |  |
 
 
-**Example:** [` api.csdb.app/v1/popular/profile?limit=5 `](https://api.csdb.app/v1/popular/profile?limit=5)<br>
+**Exemplo:** [` api.csdb.app/v1/popular/profile?limit=5 `](https://api.csdb.app/v1/popular/profile?limit=5)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -1699,28 +1699,28 @@ Returns the list of popular profiles
 ---
 
 ### popular/track
-Returns the list of popular songs
+Retorna a lista das músicas populares
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `profile` | _String (optional)_ | Profile ID to return only the songs from a specific profile |
-| `limit` | _Number (optional)_ | Maximum number of items returned. `1 ~ 100` `Default: 10` |
+| `profile` | _String (opcional)_ | ID do perfil para retornar apenas as músicas de um determinado perfil |
+| `limit` | _Number (opcional)_ | Quantidade máxima de itens retornados. `1 ~ 100` `Padrão: 10` |
 
 
-**Response:**
+**Resposta:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
 | `tracks` | _Array&lt;[Track](#track)&gt;_ |  |
 | `limit` | _Number_ |  |
 
 
-**Example:** [` api.csdb.app/v1/popular/track?profile=&limit=5 `](https://api.csdb.app/v1/popular/track?profile=&limit=5)<br>
+**Exemplo:** [` api.csdb.app/v1/popular/track?profile=&limit=5 `](https://api.csdb.app/v1/popular/track?profile=&limit=5)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -1857,28 +1857,28 @@ Returns the list of popular songs
 ---
 
 ### popular/work
-Returns the list of popular works
+Retorna a lista das obras populares
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `profile` | _String (optional)_ | Profile ID to return only the works of a specific profile |
-| `limit` | _Number (optional)_ | Maximum number of items returned. `1 ~ 100` `Default: 10` |
+| `profile` | _String (opcional)_ | ID do perfil para retornar apenas as obras de um determinado perfil |
+| `limit` | _Number (opcional)_ | Quantidade máxima de itens retornados. `1 ~ 100` `Padrão: 10` |
 
 
-**Response:**
+**Resposta:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
 | `works` | _Array&lt;[Work](#work)&gt;_ |  |
 | `limit` | _Number_ |  |
 
 
-**Example:** [` api.csdb.app/v1/popular/work?profile=&limit=5 `](https://api.csdb.app/v1/popular/work?profile=&limit=5)<br>
+**Exemplo:** [` api.csdb.app/v1/popular/work?profile=&limit=5 `](https://api.csdb.app/v1/popular/work?profile=&limit=5)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -2015,26 +2015,26 @@ Returns the list of popular works
 ---
 
 ### search/profile
-Search for a profile by name
+Pesquisa um perfil pelo nome
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `q` | _String_ | Text to be searched |
+| `q` | _String_ | Texto a ser pesquisado |
 
 
-**Response:**
+**Resposta:**
 
-| Name | Type  |
+| Nome | Tipo  |
 | ---- | :---: |
 | `profiles` | _Array&lt;[Profile](#profile)&gt;_| 
 
 
-**Example:** [` api.csdb.app/v1/search/profile?q=fernandinho `](https://api.csdb.app/v1/search/profile?q=fernandinho)<br>
+**Exemplo:** [` api.csdb.app/v1/search/profile?q=fernandinho `](https://api.csdb.app/v1/search/profile?q=fernandinho)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -2100,26 +2100,26 @@ Search for a profile by name
 ---
 
 ### search/track
-Search for a song by name
+Pesquisa uma música pelo nome
 
-**Parameters:**
+**Parâmetros:**
 
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `q` | _String_ | Text to be searched |
+| `q` | _String_ | Texto a ser pesquisado |
 
 
-**Response:**
+**Resposta:**
 
-| Name | Type  |
+| Nome | Tipo  |
 | ---- | :---: |
 | `tracks` | _Array&lt;[Track](#track)&gt;_| 
 
 
-**Example:** [` api.csdb.app/v1/search/track?q=a%20ele%20a%20gloria `](https://api.csdb.app/v1/search/track?q=a%20ele%20a%20gloria)<br>
+**Exemplo:** [` api.csdb.app/v1/search/track?q=a%20ele%20a%20gloria `](https://api.csdb.app/v1/search/track?q=a%20ele%20a%20gloria)<br>
 
 <details>
-  <summary>Response</summary>
+  <summary>Resposta</summary>
 
 ```json
 {
@@ -2418,74 +2418,74 @@ Search for a song by name
 # Classes
 
 ## Profile
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `id` | _String_ | Item ID |
-| `name` | _String (optional)_ | Full name |
-| `alias` | _String_ | Stage name |
-| `alias_author` | _String_ | Alternative name (optional) used in places that inform author/composer |
-| `type` | _String_ | Profile type.<br>It can be: `person` `group` `label` `publisher` `hymnal` |
+| `id` | _String_ | ID do item |
+| `name` | _String (opcional)_ | Nome completo |
+| `alias` | _String_ | Nome artístico |
+| `alias_author` | _String_ | Nome alternativo (opcional) utilizado nos locais que informam autor/compositor |
+| `type` | _String_ | Tipo do perfil.<br>Pode ser: `person` `group` `label` `publisher` `hymnal` |
 | `country` | _String_ | ISO 639 two-letter language code |
 | `copyright` | _String_ |  |
-| `gospel` | _Boolean_ | **true** if the profile is associated with a person/group/evangelical band |
+| `gospel` | _Boolean_ | **true** se o perfil for associado à uma pessoa/grupo/banda evangélica |
 | `about` | _String_ |  |
 | `site` | _String_ | https://example.com |
-| `work_count` | _Number_ | Number of compositions associated with the profile |
-| `track_count` | _Number_ | Number of recordings associated with the profile |
-| `external_links` | _Array&lt;[ExternalLink](#externallink)&gt;_ | External profile links (for example, social media) |
+| `work_count` | _Number_ | Quantidade de composições associadas ao perfil |
+| `track_count` | _Number_ | Quantidade de gravações associadas ao perfil |
+| `external_links` | _Array&lt;[ExternalLink](#externallink)&gt;_ | Links externos do perfil (por exemplo, redes sociais) |
 
 ## Work
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `id` | _String_ | Item ID |
-| `title` | _String_ | Title of the work |
+| `id` | _String_ | ID do item |
+| `title` | _String_ | Título da obra |
 | `year` | _Number_ |  |
 | `language` | _String_ | ISO 639 three-letter language code |
-| `derived_from` | _[WorkDerivedFrom](#workderivedfrom)_ | Returns the information of the original work if the item is a derivative work (a translated version, for example) |
+| `derived_from` | _[WorkDerivedFrom](#workderivedfrom)_ | Retorna a informação da obra original se o item for uma obra derivada (uma versão traduzida, por exemplo) |
 | `bpm` | _Number_ | BPM |
-| `references` | _Array&lt;[WorkReference](#workreference)&gt;_ | References of the work (composers, for example) |
-| `recording_count` | _Number_ | Number of recordings that use this work |
+| `references` | _Array&lt;[WorkReference](#workreference)&gt;_ | Referências da obra (compositores, por exemplo) |
+| `recording_count` | _Number_ | Quantidade de gravações que utilizam esta obra |
 
 ## Track
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `id` | _String_ | Item ID |
-| `title` | _String_ | Song title |
-| `year` | _Number_ | Release year |
+| `id` | _String_ | ID do item |
+| `title` | _String_ | Título da música |
+| `year` | _Number_ | Ano de lançamento |
 | `language` | _String_ | ISO 639 three-letter language code |
-| `isrc` | _String_ | ISRC Code |
+| `isrc` | _String_ | Código ISRC |
 | `bpm` | _Number_ | BPM |
-| `key` | _Number_ | Tone.<br>It can be: `C` `C#` `Db` `D` `D#` `Eb` `E` `F` `F#` `Gb` `G` `G#` `Ab` `A` `A#` `Bb` `B` `Cm` `C#m` `Dbm` `Dm` `D#m` `Ebm` `Em` `Fm` `F#m` `Gbm` `Gm` `G#m` `Abm` `Am` `A#m` `Bbm` `Bm` |
-| `time_sig` | _Number_ | Music time.<br>It can be: `2/2` `2/4` `3/4` `4/4` `5/4` `6/4` `3/8` `6/8` `7/8` `9/8` `12/8` |
-| `references` | _Array&lt;[TrackReference](#trackreference)&gt;_ | Music references (artists, for example) |
-| `works` | _Array&lt;[Work](#work)&gt;_ | Work(s) used in the recording |
-| `external_links` | _Array&lt;[ExternalLink](#externallink)&gt;_ | External links of the song |
+| `key` | _Number_ | Tonalidade.<br>Pode ser: `C` `C#` `Db` `D` `D#` `Eb` `E` `F` `F#` `Gb` `G` `G#` `Ab` `A` `A#` `Bb` `B` `Cm` `C#m` `Dbm` `Dm` `D#m` `Ebm` `Em` `Fm` `F#m` `Gbm` `Gm` `G#m` `Abm` `Am` `A#m` `Bbm` `Bm` |
+| `time_sig` | _Number_ | Tempo da música.<br>Pode ser: `2/2` `2/4` `3/4` `4/4` `5/4` `6/4` `3/8` `6/8` `7/8` `9/8` `12/8` |
+| `references` | _Array&lt;[TrackReference](#trackreference)&gt;_ | Referências da música (artistas, por exemplo) |
+| `works` | _Array&lt;[Work](#work)&gt;_ | Obra(s) utilizada(s) na gravação |
+| `external_links` | _Array&lt;[ExternalLink](#externallink)&gt;_ | Links externos da música |
 
 ## WorkReference
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `type` | _String_ | It can be: `author` `composer` `versionist` `editor` `publisher` `administrator` |
+| `type` | _String_ | Pode ser: `author` `composer` `versionist` `editor` `publisher` `administrator` |
 | `profile` | _[Profile](#profile)_ |  |
 
 ## TrackReference
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `type` | _String_ | It can be: `artist` `label` `publisher` `administrator` |
+| `type` | _String_ | Pode ser: `artist` `label` `publisher` `administrator` |
 | `profile` | _[Profile](#profile)_ |  |
 
 ## ExternalLink
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `type` | _String_ | For objects of type `Profile`, it can be: `spotify` `youtube` `youtube_music` `apple_music` `amazon_music` `deezer` `multitracks` `letras_mus` `facebook` `instagram` `tiktok` `twitter` `wikipedia`<br><br>For objects of type `Track`, it can be: `youtube_video` `spotify` `youtube` `apple_music` `amazon_music` `deezer` `youtube_video_lyrics` `multitracks` `letras_mus` `cifra_club` `spotify_bt` `youtube_bt` `apple_music_bt` `amazon_music_bt` `deezer_bt` `youtube_video_lyrics_bt`<br><br>Items ending in `_bt` means `Backing Track`, that is, it is the "Playback" of the respective song |
-| `id` | _String_ | Resource ID in the respective service |
-| `url` | _String_ | URL to access the resource |
-| `uri` | _String (optional)_ | Resource URI (available only for certain types, such as Spotify, for example) |
-| `language` | _String (optional)_ | Available only for `type=wikipedia`<br>ISO 639 two-letter language code<br> |
+| `type` | _String_ | Para objetos do tipo `Profile`, pode ser: `spotify` `youtube` `youtube_music` `apple_music` `amazon_music` `deezer` `multitracks` `letras_mus` `facebook` `instagram` `tiktok` `twitter` `wikipedia`<br><br>Para objetos do tipo `Track`, pode ser: `youtube_video` `spotify` `youtube` `apple_music` `amazon_music` `deezer` `youtube_video_lyrics` `multitracks` `letras_mus` `cifra_club` `spotify_bt` `youtube_bt` `apple_music_bt` `amazon_music_bt` `deezer_bt` `youtube_video_lyrics_bt`<br><br>Itens terminados em `_bt` significa `Backing Track`, ou seja, é o "Playback" da respectiva música |
+| `id` | _String_ | ID do recurso no respectivo serviço |
+| `url` | _String_ | URL para acesso ao recurso |
+| `uri` | _String (opcional)_ | URI do recurso (disponível apenas para alguns tipos, como spotify, por exemplo) |
+| `language` | _String (opcional)_ | Disponível apenas para `type=wikipedia`<br>ISO 639 two-letter language code<br> |
 
 ## WorkDerivedFrom
-| Name | Type  | Description |
+| Nome | Tipo  | Descrição |
 | ---- | :---: | ------------|
-| `id` | _String_ | ID of the respective `Work` object |
+| `id` | _String_ | ID do respectivo objeto `Work` |
 | `title` | _String_ |  |
 | `year` | _Number_ |  |
 | `language` | _String_ | ISO 639 three-letter language code |
