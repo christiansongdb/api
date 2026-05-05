@@ -42,10 +42,10 @@ https://api.csdb.app/v1/
   - [profile/{id}/works](#profileidworks)
   - [work/{id}/recordings](#workidrecordings)
   - [work/{id}/versions](#workidversions)
-  - [work/{id}/recordings_and_versions](#workidrecordingsandversions)
-  - [track/{id}/alternative_versions](#trackidalternativeversions)
-  - [{external_link_type}/profile/{id}](#externallinktypeprofileid)
-  - [{external_link_type}/track/{id}](#externallinktypetrackid)
+  - [work/{id}/recordings_and_versions](#workidrecordings_and_versions)
+  - [track/{id}/alternative_versions](#trackidalternative_versions)
+  - [{external_link_type}/profile/{id}](#external_link_typeprofileid)
+  - [{external_link_type}/track/{id}](#external_link_typetrackid)
   - [popular/profile](#popularprofile)
   - [popular/track](#populartrack)
   - [popular/work](#popularwork)
@@ -458,7 +458,7 @@ Returns the list of compositions of a profile
 
 | Name | Type  | Description |
 | ---- | :---: | ------------|
-| `works` | _[Work](#work)_ |  |
+| `works` | _Array&lt;[Work](#work)&gt;_ |  |
 | `limit` | _Number_ |  |
 | `page` | _Number_ |  |
 | `order` | _String_ |  |
@@ -573,7 +573,7 @@ Returns the list of recordings of the respective work
 
 | Name | Type  | Description |
 | ---- | :---: | ------------|
-| `recordings` | _[Track](#track)_ |  |
+| `recordings` | _Array&lt;[Track](#track)&gt;_ |  |
 | `limit` | _Number_ |  |
 | `page` | _Number_ |  |
 | `total` | _Number_ | Total number of available items |
@@ -719,7 +719,7 @@ Returns the list of derivative works (versions) of the respective work
 
 | Name | Type  | Description |
 | ---- | :---: | ------------|
-| `versions` | _[Work](#work)_ |  |
+| `versions` | _Array&lt;[Work](#work)&gt;_ |  |
 | `limit` | _Number_ |  |
 | `page` | _Number_ |  |
 | `total` | _Number_ | Total number of available items |
@@ -854,8 +854,8 @@ Returns the list of recordings and the list of derivative works (versions) of th
 
 | Name | Type  | Description |
 | ---- | :---: | ------------|
-| `recordings` | _[Track](#track)_ |  |
-| `versions` | _[Work](#work)_ |  |
+| `recordings` | _Array&lt;[Track](#track)&gt;_ |  |
+| `versions` | _Array&lt;[Work](#work)&gt;_ |  |
 | `limit` | _Number_ |  |
 | `page` | _Number_ |  |
 | `total_recordings` | _Number_ | Total number of recordings available |
@@ -1049,7 +1049,7 @@ Returns the list of recordings by the same artist that use the same composition
 
 | Name | Type  |
 | ---- | :---: |
-| `alternative_versions` | _[Track](#track)_| 
+| `alternative_versions` | _Array&lt;[Track](#track)&gt;_| 
 
 
 **Example:** [` api.csdb.app/v1/track/5099252/alternative_versions `](https://api.csdb.app/v1/track/5099252/alternative_versions)<br>
