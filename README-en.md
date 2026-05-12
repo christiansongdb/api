@@ -38,6 +38,9 @@ https://api.csdb.app/v1/
   - [profile/{id}](#profileid)
   - [work/{id}](#workid)
   - [track/{id}](#trackid)
+  - [profiles](#profiles)
+  - [works](#works)
+  - [tracks](#tracks)
   - [profile/{id}/tracks](#profileidtracks)
   - [profile/{id}/works](#profileidworks)
   - [work/{id}/recordings](#workidrecordings)
@@ -46,6 +49,8 @@ https://api.csdb.app/v1/
   - [track/{id}/alternative_versions](#trackidalternative_versions)
   - [{external_link_type}/profile/{id}](#external_link_typeprofileid)
   - [{external_link_type}/track/{id}](#external_link_typetrackid)
+  - [{external_link_type}/profiles](#external_link_typeprofiles)
+  - [{external_link_type}/tracks](#external_link_typetracks)
   - [popular/profile](#popularprofile)
   - [popular/track](#populartrack)
   - [popular/work](#popularwork)
@@ -325,6 +330,1019 @@ Returns a song (recording)
       "_self": "https://api.csdb.app/v1/track/3165776"
     }
   }
+}
+```
+</details>
+
+
+---
+
+### profiles
+Returns multiple profiles according to the provided IDs
+
+**Parameters:**
+
+| Name | Type  | Description |
+| ---- | :---: | ------------|
+| `ids` | _String_ | List of IDs separated by commas. Maximum:  50 IDs |
+
+
+**Response:**
+
+| Type  |
+| :---: |
+| _Array&lt;[Profile](#profile)&gt;_ | 
+
+
+**Example:** [` api.csdb.app/v1/profiles?ids=5450607,6401907,5580760 `](https://api.csdb.app/v1/profiles?ids=5450607,6401907,5580760)<br>
+
+<details>
+  <summary>Response</summary>
+
+```json
+{
+  "status": "ok",
+  "result": [
+    {
+      "id": 5450607,
+      "name": "Aline Kistenmacker Barros dos Santos",
+      "alias": "Aline Barros",
+      "alias_author": "",
+      "type": "person",
+      "country": "BR",
+      "copyright": "",
+      "about": "",
+      "gospel": true,
+      "work_count": 65,
+      "track_count": 592,
+      "external_links": [
+        {
+          "type": "spotify",
+          "id": "2aKyKSggb31Kw9s9i3iXoo",
+          "url": "https://open.spotify.com/artist/2aKyKSggb31Kw9s9i3iXoo",
+          "uri": "spotify:artist:2aKyKSggb31Kw9s9i3iXoo"
+        },
+        {
+          "type": "youtube",
+          "id": "UCK_FvuzJN7rP4k2Ppwnvj5g",
+          "url": "https://www.youtube.com/channel/UCK_FvuzJN7rP4k2Ppwnvj5g"
+        },
+        {
+          "type": "youtube_music",
+          "id": "UCLht-MP7US76eAlqD1xuDng",
+          "url": "https://music.youtube.com/channel/UCLht-MP7US76eAlqD1xuDng"
+        },
+        {
+          "type": "apple_music",
+          "id": "259700377",
+          "url": "https://music.apple.com/br/artist/259700377"
+        },
+        {
+          "type": "amazon_music",
+          "id": "B0013CSN2G",
+          "url": "https://music.amazon.com.br/artists/B0013CSN2G"
+        },
+        {
+          "type": "deezer",
+          "id": "14000",
+          "url": "https://www.deezer.com/artist/14000",
+          "uri": "deezer://www.deezer.com/artist/14000"
+        },
+        {
+          "type": "multitracks",
+          "id": "Aline-Barros",
+          "url": "https://www.multitracks.com/artists/Aline-Barros/"
+        },
+        {
+          "type": "letras_mus",
+          "id": "aline-barros",
+          "url": "https://www.letras.mus.br/aline-barros"
+        },
+        {
+          "type": "instagram",
+          "id": "alinebarros",
+          "url": "https://www.instagram.com/alinebarros/"
+        }
+      ],
+      "_links": {
+        "_self": "https://api.csdb.app/v1/profile/5450607",
+        "tracks": "https://api.csdb.app/v1/profile/5450607/tracks",
+        "works": "https://api.csdb.app/v1/profile/5450607/works",
+        "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=5450607",
+        "popular_works": "https://api.csdb.app/v1/popular/work?profile=5450607"
+      }
+    },
+    {
+      "id": 6401907,
+      "name": "Gabriela Rocha Correa Moreira",
+      "alias": "Gabriela Rocha",
+      "alias_author": "",
+      "type": "person",
+      "country": "BR",
+      "copyright": "",
+      "about": "",
+      "gospel": true,
+      "work_count": 14,
+      "track_count": 151,
+      "external_links": [
+        {
+          "type": "spotify",
+          "id": "4fdCGYM7dtJLa3LvR1ccto",
+          "url": "https://open.spotify.com/artist/4fdCGYM7dtJLa3LvR1ccto",
+          "uri": "spotify:artist:4fdCGYM7dtJLa3LvR1ccto"
+        },
+        {
+          "type": "youtube",
+          "id": "UC4t2mdI8uAiJDJSRjiWJT1Q",
+          "url": "https://www.youtube.com/channel/UC4t2mdI8uAiJDJSRjiWJT1Q"
+        },
+        {
+          "type": "youtube_music",
+          "id": "UCtilVkO8eHizeFSs5s5vvCA",
+          "url": "https://music.youtube.com/channel/UCtilVkO8eHizeFSs5s5vvCA"
+        },
+        {
+          "type": "apple_music",
+          "id": "563326026",
+          "url": "https://music.apple.com/br/artist/563326026"
+        },
+        {
+          "type": "amazon_music",
+          "id": "B009FOJ4L8",
+          "url": "https://music.amazon.com.br/artists/B009FOJ4L8"
+        },
+        {
+          "type": "deezer",
+          "id": "4023522",
+          "url": "https://www.deezer.com/artist/4023522",
+          "uri": "deezer://www.deezer.com/artist/4023522"
+        },
+        {
+          "type": "multitracks",
+          "id": "Gabriela-Rocha",
+          "url": "https://www.multitracks.com/artists/Gabriela-Rocha/"
+        },
+        {
+          "type": "letras_mus",
+          "id": "gabriela-rocha",
+          "url": "https://www.letras.mus.br/gabriela-rocha"
+        },
+        {
+          "type": "instagram",
+          "id": "gabrielarocha77",
+          "url": "https://www.instagram.com/gabrielarocha77/"
+        },
+        {
+          "type": "wikipedia",
+          "id": "Gabriela_Rocha",
+          "language": "pt",
+          "url": "https://pt.wikipedia.org/wiki/Gabriela_Rocha"
+        }
+      ],
+      "_links": {
+        "_self": "https://api.csdb.app/v1/profile/6401907",
+        "tracks": "https://api.csdb.app/v1/profile/6401907/tracks",
+        "works": "https://api.csdb.app/v1/profile/6401907/works",
+        "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=6401907",
+        "popular_works": "https://api.csdb.app/v1/popular/work?profile=6401907"
+      }
+    },
+    {
+      "id": 5580760,
+      "name": "Fernando Jerônimo dos Santos Júnior",
+      "alias": "Fernandinho",
+      "alias_author": "",
+      "type": "person",
+      "country": "BR",
+      "copyright": "",
+      "about": "",
+      "gospel": true,
+      "work_count": 89,
+      "track_count": 360,
+      "external_links": [
+        {
+          "type": "spotify",
+          "id": "6iAY2AyUZLSX3PWLIAfFZY",
+          "url": "https://open.spotify.com/artist/6iAY2AyUZLSX3PWLIAfFZY",
+          "uri": "spotify:artist:6iAY2AyUZLSX3PWLIAfFZY"
+        },
+        {
+          "type": "youtube",
+          "id": "UCH1U29foC-5RyAa4ZgkuQYA",
+          "url": "https://www.youtube.com/channel/UCH1U29foC-5RyAa4ZgkuQYA"
+        },
+        {
+          "type": "youtube_music",
+          "id": "UCwQLQJL8Cpyk5tVPOJdXJgw",
+          "url": "https://music.youtube.com/channel/UCwQLQJL8Cpyk5tVPOJdXJgw"
+        },
+        {
+          "type": "apple_music",
+          "id": "65623345",
+          "url": "https://music.apple.com/br/artist/65623345"
+        },
+        {
+          "type": "amazon_music",
+          "id": "B001D0AA60",
+          "url": "https://music.amazon.com.br/artists/B001D0AA60"
+        },
+        {
+          "type": "deezer",
+          "id": "1352049",
+          "url": "https://www.deezer.com/artist/1352049",
+          "uri": "deezer://www.deezer.com/artist/1352049"
+        },
+        {
+          "type": "multitracks",
+          "id": "Fernandinho",
+          "url": "https://www.multitracks.com/artists/Fernandinho/"
+        },
+        {
+          "type": "letras_mus",
+          "id": "fernandinho",
+          "url": "https://www.letras.mus.br/fernandinho"
+        },
+        {
+          "type": "instagram",
+          "id": "fernandinhoepaula",
+          "url": "https://www.instagram.com/fernandinhoepaula/"
+        }
+      ],
+      "_links": {
+        "_self": "https://api.csdb.app/v1/profile/5580760",
+        "tracks": "https://api.csdb.app/v1/profile/5580760/tracks",
+        "works": "https://api.csdb.app/v1/profile/5580760/works",
+        "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=5580760",
+        "popular_works": "https://api.csdb.app/v1/popular/work?profile=5580760"
+      }
+    }
+  ]
+}
+```
+</details>
+
+
+---
+
+### works
+Returns multiple works according to the provided IDs
+
+**Parameters:**
+
+| Name | Type  | Description |
+| ---- | :---: | ------------|
+| `ids` | _String_ | List of IDs separated by commas. Maximum:  50 IDs |
+
+
+**Response:**
+
+| Type  |
+| :---: |
+| _Array&lt;[Work](#work)&gt;_ | 
+
+
+**Example:** [` api.csdb.app/v1/works?ids=8063427,8947355,3651970 `](https://api.csdb.app/v1/works?ids=8063427,8947355,3651970)<br>
+
+<details>
+  <summary>Response</summary>
+
+```json
+{
+  "status": "ok",
+  "result": [
+    {
+      "id": 8063427,
+      "title": "Jeová Jireh",
+      "year": 2021,
+      "language": "por",
+      "references": [
+        {
+          "type": "author",
+          "profile": {
+            "id": 6199575,
+            "name": "Samuel Messias Cabral",
+            "alias": "Samuel Messias",
+            "alias_author": "",
+            "type": "person",
+            "country": "BR",
+            "copyright": "",
+            "gospel": true,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/6199575",
+              "tracks": "https://api.csdb.app/v1/profile/6199575/tracks",
+              "works": "https://api.csdb.app/v1/profile/6199575/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=6199575",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=6199575"
+            }
+          }
+        }
+      ],
+      "recording_count": 8,
+      "_links": {
+        "_self": "https://api.csdb.app/v1/work/8063427",
+        "recordings": "https://api.csdb.app/v1/work/8063427/recordings",
+        "versions": "https://api.csdb.app/v1/work/8063427/versions",
+        "recordings_and_versions": "https://api.csdb.app/v1/work/8063427/recordings_and_versions",
+        "popular": "https://api.csdb.app/v1/popular/work"
+      }
+    },
+    {
+      "id": 8947355,
+      "title": "Bondade de Deus",
+      "year": 2022,
+      "language": "por",
+      "derived_from": {
+        "id": 7269270,
+        "title": "Goodness Of God",
+        "language": "eng"
+      },
+      "references": [
+        {
+          "type": "author",
+          "profile": {
+            "id": 2365747,
+            "name": "Jason David Ingram",
+            "alias": "Jason Ingram",
+            "alias_author": "",
+            "type": "person",
+            "country": "US",
+            "copyright": "",
+            "gospel": true,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/2365747",
+              "tracks": "https://api.csdb.app/v1/profile/2365747/tracks",
+              "works": "https://api.csdb.app/v1/profile/2365747/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=2365747",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=2365747"
+            }
+          }
+        },
+        {
+          "type": "author",
+          "profile": {
+            "id": 7545720,
+            "name": "Jennifer Louise Johnson",
+            "alias": "Jenn Johnson",
+            "alias_author": "",
+            "type": "person",
+            "country": "US",
+            "copyright": "",
+            "gospel": true,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/7545720",
+              "tracks": "https://api.csdb.app/v1/profile/7545720/tracks",
+              "works": "https://api.csdb.app/v1/profile/7545720/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=7545720",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=7545720"
+            }
+          }
+        },
+        {
+          "type": "author",
+          "profile": {
+            "id": 5081677,
+            "name": "Benjamin David Fielding",
+            "alias": "Ben Fielding",
+            "alias_author": "",
+            "type": "person",
+            "country": "AU",
+            "copyright": "",
+            "gospel": true,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/5081677",
+              "tracks": "https://api.csdb.app/v1/profile/5081677/tracks",
+              "works": "https://api.csdb.app/v1/profile/5081677/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=5081677",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=5081677"
+            }
+          }
+        },
+        {
+          "type": "author",
+          "profile": {
+            "id": 3475062,
+            "name": "Edmond Martin Cash",
+            "alias": "Ed Cash",
+            "alias_author": "",
+            "type": "person",
+            "country": "US",
+            "copyright": "",
+            "gospel": true,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/3475062",
+              "tracks": "https://api.csdb.app/v1/profile/3475062/tracks",
+              "works": "https://api.csdb.app/v1/profile/3475062/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=3475062",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=3475062"
+            }
+          }
+        },
+        {
+          "type": "author",
+          "profile": {
+            "id": 2073892,
+            "name": "Brian Mark Johnson",
+            "alias": "Brian Johnson",
+            "alias_author": "",
+            "type": "person",
+            "country": "US",
+            "copyright": "",
+            "gospel": false,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/2073892",
+              "tracks": "https://api.csdb.app/v1/profile/2073892/tracks",
+              "works": "https://api.csdb.app/v1/profile/2073892/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=2073892",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=2073892"
+            }
+          }
+        }
+      ],
+      "recording_count": 44,
+      "_links": {
+        "_self": "https://api.csdb.app/v1/work/8947355",
+        "recordings": "https://api.csdb.app/v1/work/8947355/recordings",
+        "versions": "https://api.csdb.app/v1/work/8947355/versions",
+        "recordings_and_versions": "https://api.csdb.app/v1/work/8947355/recordings_and_versions",
+        "popular": "https://api.csdb.app/v1/popular/work"
+      }
+    },
+    {
+      "id": 3651970,
+      "title": "A Ele a Glória",
+      "year": 1999,
+      "language": "por",
+      "derived_from": {
+        "id": 3630518,
+        "title": "To Him Be Glory",
+        "language": "eng"
+      },
+      "references": [
+        {
+          "type": "author",
+          "profile": {
+            "id": 9265151,
+            "name": "Paul Kevin Jonas Sr.",
+            "alias": "Kevin Jonas",
+            "alias_author": "",
+            "type": "person",
+            "country": "US",
+            "copyright": "",
+            "gospel": true,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/9265151",
+              "tracks": "https://api.csdb.app/v1/profile/9265151/tracks",
+              "works": "https://api.csdb.app/v1/profile/9265151/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=9265151",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=9265151"
+            }
+          }
+        },
+        {
+          "type": "versionist",
+          "profile": {
+            "id": 6179930,
+            "name": "Ana Paula Machado Valadão Bessa",
+            "alias": "Ana Paula Valadão",
+            "alias_author": "",
+            "type": "person",
+            "country": "BR",
+            "copyright": "",
+            "gospel": true,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/6179930",
+              "tracks": "https://api.csdb.app/v1/profile/6179930/tracks",
+              "works": "https://api.csdb.app/v1/profile/6179930/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=6179930",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=6179930"
+            }
+          }
+        }
+      ],
+      "recording_count": 10,
+      "_links": {
+        "_self": "https://api.csdb.app/v1/work/3651970",
+        "recordings": "https://api.csdb.app/v1/work/3651970/recordings",
+        "versions": "https://api.csdb.app/v1/work/3651970/versions",
+        "recordings_and_versions": "https://api.csdb.app/v1/work/3651970/recordings_and_versions",
+        "popular": "https://api.csdb.app/v1/popular/work"
+      }
+    }
+  ]
+}
+```
+</details>
+
+
+---
+
+### tracks
+Returns several songs (recordings) according to the provided IDs
+
+**Parameters:**
+
+| Name | Type  | Description |
+| ---- | :---: | ------------|
+| `ids` | _String_ | List of IDs separated by commas. Maximum:  50 IDs |
+
+
+**Response:**
+
+| Type  |
+| :---: |
+| _Array&lt;[Track](#track)&gt;_ | 
+
+
+**Example:** [` api.csdb.app/v1/tracks?ids=3165776,9226281,4055834 `](https://api.csdb.app/v1/tracks?ids=3165776,9226281,4055834)<br>
+
+<details>
+  <summary>Response</summary>
+
+```json
+{
+  "status": "ok",
+  "result": [
+    {
+      "id": 3165776,
+      "title": "Jeová Jireh",
+      "year": 2021,
+      "language": "por",
+      "isrc": "BXBKK2100090",
+      "bpm": "67",
+      "key": "G",
+      "time_sig": "4/4",
+      "duration": 389,
+      "references": [
+        {
+          "type": "artist",
+          "profile": {
+            "id": 5450607,
+            "name": "Aline Kistenmacker Barros dos Santos",
+            "alias": "Aline Barros",
+            "alias_author": "",
+            "type": "person",
+            "country": "BR",
+            "copyright": "",
+            "gospel": true,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/5450607",
+              "tracks": "https://api.csdb.app/v1/profile/5450607/tracks",
+              "works": "https://api.csdb.app/v1/profile/5450607/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=5450607",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=5450607"
+            }
+          }
+        }
+      ],
+      "works": [
+        {
+          "id": 8063427,
+          "title": "Jeová Jireh",
+          "year": 2021,
+          "language": "por",
+          "references": [
+            {
+              "type": "author",
+              "profile": {
+                "id": 6199575,
+                "name": "Samuel Messias Cabral",
+                "alias": "Samuel Messias",
+                "alias_author": "",
+                "type": "person",
+                "country": "BR",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/6199575",
+                  "tracks": "https://api.csdb.app/v1/profile/6199575/tracks",
+                  "works": "https://api.csdb.app/v1/profile/6199575/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=6199575",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=6199575"
+                }
+              }
+            }
+          ],
+          "_links": {
+            "_self": "https://api.csdb.app/v1/work/8063427",
+            "recordings": "https://api.csdb.app/v1/work/8063427/recordings",
+            "versions": "https://api.csdb.app/v1/work/8063427/versions",
+            "recordings_and_versions": "https://api.csdb.app/v1/work/8063427/recordings_and_versions",
+            "popular": "https://api.csdb.app/v1/popular/work"
+          }
+        }
+      ],
+      "external_links": [
+        {
+          "type": "youtube_video",
+          "id": "YyFd_dXy494",
+          "url": "https://www.youtube.com/watch?v=YyFd_dXy494"
+        },
+        {
+          "type": "spotify",
+          "id": "1uoA57FMhP9QjZxIJZVEWo",
+          "url": "https://open.spotify.com/track/1uoA57FMhP9QjZxIJZVEWo",
+          "uri": "spotify:track:1uoA57FMhP9QjZxIJZVEWo"
+        },
+        {
+          "type": "spotify_bt",
+          "id": "1HUdrBWYNNB1FdEjHZ4s53",
+          "url": "https://open.spotify.com/track/1HUdrBWYNNB1FdEjHZ4s53",
+          "uri": "spotify:track:1HUdrBWYNNB1FdEjHZ4s53"
+        },
+        {
+          "type": "youtube",
+          "id": "PxHCmlyNvhk",
+          "url": "https://music.youtube.com/watch?v=PxHCmlyNvhk"
+        },
+        {
+          "type": "youtube_bt",
+          "id": "FMacI8fHefw",
+          "url": "https://music.youtube.com/watch?v=FMacI8fHefw"
+        },
+        {
+          "type": "apple_music",
+          "id": "1604260568",
+          "url": "https://music.apple.com/br/song/1604260568"
+        },
+        {
+          "type": "amazon_music",
+          "id": "B09Q58XNGQ",
+          "url": "https://music.amazon.com.br/tracks/B09Q58XNGQ"
+        },
+        {
+          "type": "deezer",
+          "id": "1617019152",
+          "url": "https://www.deezer.com/track/1617019152",
+          "uri": "deezer://www.deezer.com/track/1617019152"
+        },
+        {
+          "type": "deezer_bt",
+          "id": "1617027062",
+          "url": "https://www.deezer.com/track/1617027062",
+          "uri": "deezer://www.deezer.com/track/1617027062"
+        },
+        {
+          "type": "letras_mus",
+          "id": "aline-barros/jeova-jireh",
+          "url": "https://www.letras.mus.br/aline-barros/jeova-jireh"
+        },
+        {
+          "type": "cifra_club",
+          "id": "aline-barros/jeova-jireh",
+          "url": "https://www.cifraclub.com.br/aline-barros/jeova-jireh"
+        }
+      ],
+      "_links": {
+        "_self": "https://api.csdb.app/v1/track/3165776",
+        "popular": "https://api.csdb.app/v1/popular/track"
+      }
+    },
+    {
+      "id": 9226281,
+      "title": "Bondade de Deus",
+      "year": 2022,
+      "language": "por",
+      "isrc": "BCII12200001",
+      "bpm": "68",
+      "key": "D",
+      "time_sig": "4/4",
+      "duration": 375,
+      "references": [
+        {
+          "type": "artist",
+          "profile": {
+            "id": 4721467,
+            "name": "Isaias Carlos Junior",
+            "alias": "Isaias Saad",
+            "alias_author": "",
+            "type": "person",
+            "country": "BR",
+            "copyright": "",
+            "gospel": true,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/4721467",
+              "tracks": "https://api.csdb.app/v1/profile/4721467/tracks",
+              "works": "https://api.csdb.app/v1/profile/4721467/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=4721467",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=4721467"
+            }
+          }
+        }
+      ],
+      "works": [
+        {
+          "id": 8947355,
+          "title": "Bondade de Deus",
+          "year": 2022,
+          "language": "por",
+          "derived_from": {
+            "id": 7269270,
+            "title": "Goodness Of God",
+            "language": "eng"
+          },
+          "references": [
+            {
+              "type": "author",
+              "profile": {
+                "id": 2365747,
+                "name": "Jason David Ingram",
+                "alias": "Jason Ingram",
+                "alias_author": "",
+                "type": "person",
+                "country": "US",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/2365747",
+                  "tracks": "https://api.csdb.app/v1/profile/2365747/tracks",
+                  "works": "https://api.csdb.app/v1/profile/2365747/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=2365747",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=2365747"
+                }
+              }
+            },
+            {
+              "type": "author",
+              "profile": {
+                "id": 7545720,
+                "name": "Jennifer Louise Johnson",
+                "alias": "Jenn Johnson",
+                "alias_author": "",
+                "type": "person",
+                "country": "US",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/7545720",
+                  "tracks": "https://api.csdb.app/v1/profile/7545720/tracks",
+                  "works": "https://api.csdb.app/v1/profile/7545720/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=7545720",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=7545720"
+                }
+              }
+            },
+            {
+              "type": "author",
+              "profile": {
+                "id": 5081677,
+                "name": "Benjamin David Fielding",
+                "alias": "Ben Fielding",
+                "alias_author": "",
+                "type": "person",
+                "country": "AU",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/5081677",
+                  "tracks": "https://api.csdb.app/v1/profile/5081677/tracks",
+                  "works": "https://api.csdb.app/v1/profile/5081677/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=5081677",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=5081677"
+                }
+              }
+            },
+            {
+              "type": "author",
+              "profile": {
+                "id": 3475062,
+                "name": "Edmond Martin Cash",
+                "alias": "Ed Cash",
+                "alias_author": "",
+                "type": "person",
+                "country": "US",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/3475062",
+                  "tracks": "https://api.csdb.app/v1/profile/3475062/tracks",
+                  "works": "https://api.csdb.app/v1/profile/3475062/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=3475062",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=3475062"
+                }
+              }
+            },
+            {
+              "type": "author",
+              "profile": {
+                "id": 2073892,
+                "name": "Brian Mark Johnson",
+                "alias": "Brian Johnson",
+                "alias_author": "",
+                "type": "person",
+                "country": "US",
+                "copyright": "",
+                "gospel": false,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/2073892",
+                  "tracks": "https://api.csdb.app/v1/profile/2073892/tracks",
+                  "works": "https://api.csdb.app/v1/profile/2073892/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=2073892",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=2073892"
+                }
+              }
+            }
+          ],
+          "_links": {
+            "_self": "https://api.csdb.app/v1/work/8947355",
+            "recordings": "https://api.csdb.app/v1/work/8947355/recordings",
+            "versions": "https://api.csdb.app/v1/work/8947355/versions",
+            "recordings_and_versions": "https://api.csdb.app/v1/work/8947355/recordings_and_versions",
+            "popular": "https://api.csdb.app/v1/popular/work"
+          }
+        }
+      ],
+      "external_links": [
+        {
+          "type": "youtube_video",
+          "id": "mZ9yZYo9Mmk",
+          "url": "https://www.youtube.com/watch?v=mZ9yZYo9Mmk"
+        },
+        {
+          "type": "spotify",
+          "id": "4VvsTSxSSAu8IRBpt3iDMR",
+          "url": "https://open.spotify.com/track/4VvsTSxSSAu8IRBpt3iDMR",
+          "uri": "spotify:track:4VvsTSxSSAu8IRBpt3iDMR"
+        },
+        {
+          "type": "youtube",
+          "id": "_ptnCyRScxY",
+          "url": "https://music.youtube.com/watch?v=_ptnCyRScxY"
+        },
+        {
+          "type": "apple_music",
+          "id": "1717152377",
+          "url": "https://music.apple.com/br/song/1717152377"
+        },
+        {
+          "type": "amazon_music",
+          "id": "B0DFZNPXZ8",
+          "url": "https://music.amazon.com.br/tracks/B0DFZNPXZ8"
+        },
+        {
+          "type": "deezer",
+          "id": "2192727777",
+          "url": "https://www.deezer.com/track/2192727777",
+          "uri": "deezer://www.deezer.com/track/2192727777"
+        },
+        {
+          "type": "letras_mus",
+          "id": "isaias-saad/bondade-de-deus",
+          "url": "https://www.letras.mus.br/isaias-saad/bondade-de-deus"
+        },
+        {
+          "type": "cifra_club",
+          "id": "isaias-saad/bondade-de-deus",
+          "url": "https://www.cifraclub.com.br/isaias-saad/bondade-de-deus"
+        }
+      ],
+      "_links": {
+        "_self": "https://api.csdb.app/v1/track/9226281",
+        "popular": "https://api.csdb.app/v1/popular/track"
+      }
+    },
+    {
+      "id": 4055834,
+      "title": "A Ele a Glória",
+      "year": 1999,
+      "language": "por",
+      "isrc": "BRMLH0400046",
+      "bpm": "76",
+      "key": "Em",
+      "time_sig": "4/4",
+      "duration": 593,
+      "references": [
+        {
+          "type": "artist",
+          "profile": {
+            "id": 6686102,
+            "alias": "Diante do Trono",
+            "alias_author": "",
+            "type": "group",
+            "country": "BR",
+            "copyright": "",
+            "gospel": true,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/6686102",
+              "tracks": "https://api.csdb.app/v1/profile/6686102/tracks",
+              "works": "https://api.csdb.app/v1/profile/6686102/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=6686102",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=6686102"
+            }
+          }
+        }
+      ],
+      "works": [
+        {
+          "id": 3651970,
+          "title": "A Ele a Glória",
+          "year": 1999,
+          "language": "por",
+          "derived_from": {
+            "id": 3630518,
+            "title": "To Him Be Glory",
+            "language": "eng"
+          },
+          "references": [
+            {
+              "type": "author",
+              "profile": {
+                "id": 9265151,
+                "name": "Paul Kevin Jonas Sr.",
+                "alias": "Kevin Jonas",
+                "alias_author": "",
+                "type": "person",
+                "country": "US",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/9265151",
+                  "tracks": "https://api.csdb.app/v1/profile/9265151/tracks",
+                  "works": "https://api.csdb.app/v1/profile/9265151/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=9265151",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=9265151"
+                }
+              }
+            },
+            {
+              "type": "versionist",
+              "profile": {
+                "id": 6179930,
+                "name": "Ana Paula Machado Valadão Bessa",
+                "alias": "Ana Paula Valadão",
+                "alias_author": "",
+                "type": "person",
+                "country": "BR",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/6179930",
+                  "tracks": "https://api.csdb.app/v1/profile/6179930/tracks",
+                  "works": "https://api.csdb.app/v1/profile/6179930/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=6179930",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=6179930"
+                }
+              }
+            }
+          ],
+          "_links": {
+            "_self": "https://api.csdb.app/v1/work/3651970",
+            "recordings": "https://api.csdb.app/v1/work/3651970/recordings",
+            "versions": "https://api.csdb.app/v1/work/3651970/versions",
+            "recordings_and_versions": "https://api.csdb.app/v1/work/3651970/recordings_and_versions",
+            "popular": "https://api.csdb.app/v1/popular/work"
+          }
+        }
+      ],
+      "external_links": [
+        {
+          "type": "youtube_video",
+          "id": "Q_MerFW9qA4",
+          "url": "https://www.youtube.com/watch?v=Q_MerFW9qA4"
+        },
+        {
+          "type": "spotify",
+          "id": "1V3HlCCSvHmKqvGSNuSL1e",
+          "url": "https://open.spotify.com/track/1V3HlCCSvHmKqvGSNuSL1e",
+          "uri": "spotify:track:1V3HlCCSvHmKqvGSNuSL1e"
+        },
+        {
+          "type": "youtube",
+          "id": "_QbHjK5vrcw",
+          "url": "https://music.youtube.com/watch?v=_QbHjK5vrcw"
+        },
+        {
+          "type": "apple_music",
+          "id": "1540941938",
+          "url": "https://music.apple.com/br/song/1540941938"
+        },
+        {
+          "type": "amazon_music",
+          "id": "B0DFZ9HMF4",
+          "url": "https://music.amazon.com.br/tracks/B0DFZ9HMF4"
+        },
+        {
+          "type": "deezer",
+          "id": "1145523072",
+          "url": "https://www.deezer.com/track/1145523072",
+          "uri": "deezer://www.deezer.com/track/1145523072"
+        },
+        {
+          "type": "letras_mus",
+          "id": "diante-do-trono/porque-dele-e-por-ele",
+          "url": "https://www.letras.mus.br/diante-do-trono/porque-dele-e-por-ele"
+        },
+        {
+          "type": "cifra_club",
+          "id": "diante-do-trono/a-ele-gloria",
+          "url": "https://www.cifraclub.com.br/diante-do-trono/a-ele-gloria"
+        }
+      ],
+      "_links": {
+        "_self": "https://api.csdb.app/v1/track/4055834",
+        "popular": "https://api.csdb.app/v1/popular/track"
+      }
+    }
+  ]
 }
 ```
 </details>
@@ -1397,6 +2415,763 @@ Returns the song based on the ID of the respective external service
 
 ---
 
+### {external_link_type}/profiles
+Returns multiple profiles based on the ID of the respective external service
+
+**Parameters:**
+
+| Name | Type  | Description |
+| ---- | :---: | ------------|
+| `external_link_type` | _String_ | It can be: `spotify` `youtube` `apple_music` `amazon_music` `deezer` |
+| `ids` | _String_ | List of IDs separated by commas. Maximum:  50 IDs |
+
+
+**Response:**
+
+| Type  |
+| :---: |
+| _Array&lt;[Profile](#profile)&gt;_ | 
+
+
+**Example:** [` api.csdb.app/v1/spotify/profiles?ids=2aKyKSggb31Kw9s9i3iXoo,4fdCGYM7dtJLa3LvR1ccto,6iAY2AyUZLSX3PWLIAfFZY `](https://api.csdb.app/v1/spotify/profiles?ids=2aKyKSggb31Kw9s9i3iXoo,4fdCGYM7dtJLa3LvR1ccto,6iAY2AyUZLSX3PWLIAfFZY)<br>
+
+<details>
+  <summary>Response</summary>
+
+```json
+{
+  "status": "ok",
+  "result": [
+    {
+      "id": 5450607,
+      "name": "Aline Kistenmacker Barros dos Santos",
+      "alias": "Aline Barros",
+      "alias_author": "",
+      "type": "person",
+      "country": "BR",
+      "copyright": "",
+      "about": "",
+      "gospel": true,
+      "external_links": [
+        {
+          "type": "spotify",
+          "id": "2aKyKSggb31Kw9s9i3iXoo",
+          "url": "https://open.spotify.com/artist/2aKyKSggb31Kw9s9i3iXoo",
+          "uri": "spotify:artist:2aKyKSggb31Kw9s9i3iXoo"
+        },
+        {
+          "type": "youtube",
+          "id": "UCK_FvuzJN7rP4k2Ppwnvj5g",
+          "url": "https://www.youtube.com/channel/UCK_FvuzJN7rP4k2Ppwnvj5g"
+        },
+        {
+          "type": "youtube_music",
+          "id": "UCLht-MP7US76eAlqD1xuDng",
+          "url": "https://music.youtube.com/channel/UCLht-MP7US76eAlqD1xuDng"
+        },
+        {
+          "type": "apple_music",
+          "id": "259700377",
+          "url": "https://music.apple.com/br/artist/259700377"
+        },
+        {
+          "type": "amazon_music",
+          "id": "B0013CSN2G",
+          "url": "https://music.amazon.com.br/artists/B0013CSN2G"
+        },
+        {
+          "type": "deezer",
+          "id": "14000",
+          "url": "https://www.deezer.com/artist/14000",
+          "uri": "deezer://www.deezer.com/artist/14000"
+        },
+        {
+          "type": "multitracks",
+          "id": "Aline-Barros",
+          "url": "https://www.multitracks.com/artists/Aline-Barros/"
+        },
+        {
+          "type": "letras_mus",
+          "id": "aline-barros",
+          "url": "https://www.letras.mus.br/aline-barros"
+        },
+        {
+          "type": "instagram",
+          "id": "alinebarros",
+          "url": "https://www.instagram.com/alinebarros/"
+        }
+      ],
+      "_links": {
+        "_self": "https://api.csdb.app/v1/profile/5450607",
+        "tracks": "https://api.csdb.app/v1/profile/5450607/tracks",
+        "works": "https://api.csdb.app/v1/profile/5450607/works",
+        "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=5450607",
+        "popular_works": "https://api.csdb.app/v1/popular/work?profile=5450607"
+      }
+    },
+    {
+      "id": 6401907,
+      "name": "Gabriela Rocha Correa Moreira",
+      "alias": "Gabriela Rocha",
+      "alias_author": "",
+      "type": "person",
+      "country": "BR",
+      "copyright": "",
+      "about": "",
+      "gospel": true,
+      "external_links": [
+        {
+          "type": "spotify",
+          "id": "4fdCGYM7dtJLa3LvR1ccto",
+          "url": "https://open.spotify.com/artist/4fdCGYM7dtJLa3LvR1ccto",
+          "uri": "spotify:artist:4fdCGYM7dtJLa3LvR1ccto"
+        },
+        {
+          "type": "youtube",
+          "id": "UC4t2mdI8uAiJDJSRjiWJT1Q",
+          "url": "https://www.youtube.com/channel/UC4t2mdI8uAiJDJSRjiWJT1Q"
+        },
+        {
+          "type": "youtube_music",
+          "id": "UCtilVkO8eHizeFSs5s5vvCA",
+          "url": "https://music.youtube.com/channel/UCtilVkO8eHizeFSs5s5vvCA"
+        },
+        {
+          "type": "apple_music",
+          "id": "563326026",
+          "url": "https://music.apple.com/br/artist/563326026"
+        },
+        {
+          "type": "amazon_music",
+          "id": "B009FOJ4L8",
+          "url": "https://music.amazon.com.br/artists/B009FOJ4L8"
+        },
+        {
+          "type": "deezer",
+          "id": "4023522",
+          "url": "https://www.deezer.com/artist/4023522",
+          "uri": "deezer://www.deezer.com/artist/4023522"
+        },
+        {
+          "type": "multitracks",
+          "id": "Gabriela-Rocha",
+          "url": "https://www.multitracks.com/artists/Gabriela-Rocha/"
+        },
+        {
+          "type": "letras_mus",
+          "id": "gabriela-rocha",
+          "url": "https://www.letras.mus.br/gabriela-rocha"
+        },
+        {
+          "type": "instagram",
+          "id": "gabrielarocha77",
+          "url": "https://www.instagram.com/gabrielarocha77/"
+        },
+        {
+          "type": "wikipedia",
+          "id": "Gabriela_Rocha",
+          "language": "pt",
+          "url": "https://pt.wikipedia.org/wiki/Gabriela_Rocha"
+        }
+      ],
+      "_links": {
+        "_self": "https://api.csdb.app/v1/profile/6401907",
+        "tracks": "https://api.csdb.app/v1/profile/6401907/tracks",
+        "works": "https://api.csdb.app/v1/profile/6401907/works",
+        "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=6401907",
+        "popular_works": "https://api.csdb.app/v1/popular/work?profile=6401907"
+      }
+    },
+    {
+      "id": 5580760,
+      "name": "Fernando Jerônimo dos Santos Júnior",
+      "alias": "Fernandinho",
+      "alias_author": "",
+      "type": "person",
+      "country": "BR",
+      "copyright": "",
+      "about": "",
+      "gospel": true,
+      "external_links": [
+        {
+          "type": "spotify",
+          "id": "6iAY2AyUZLSX3PWLIAfFZY",
+          "url": "https://open.spotify.com/artist/6iAY2AyUZLSX3PWLIAfFZY",
+          "uri": "spotify:artist:6iAY2AyUZLSX3PWLIAfFZY"
+        },
+        {
+          "type": "youtube",
+          "id": "UCH1U29foC-5RyAa4ZgkuQYA",
+          "url": "https://www.youtube.com/channel/UCH1U29foC-5RyAa4ZgkuQYA"
+        },
+        {
+          "type": "youtube_music",
+          "id": "UCwQLQJL8Cpyk5tVPOJdXJgw",
+          "url": "https://music.youtube.com/channel/UCwQLQJL8Cpyk5tVPOJdXJgw"
+        },
+        {
+          "type": "apple_music",
+          "id": "65623345",
+          "url": "https://music.apple.com/br/artist/65623345"
+        },
+        {
+          "type": "amazon_music",
+          "id": "B001D0AA60",
+          "url": "https://music.amazon.com.br/artists/B001D0AA60"
+        },
+        {
+          "type": "deezer",
+          "id": "1352049",
+          "url": "https://www.deezer.com/artist/1352049",
+          "uri": "deezer://www.deezer.com/artist/1352049"
+        },
+        {
+          "type": "multitracks",
+          "id": "Fernandinho",
+          "url": "https://www.multitracks.com/artists/Fernandinho/"
+        },
+        {
+          "type": "letras_mus",
+          "id": "fernandinho",
+          "url": "https://www.letras.mus.br/fernandinho"
+        },
+        {
+          "type": "instagram",
+          "id": "fernandinhoepaula",
+          "url": "https://www.instagram.com/fernandinhoepaula/"
+        }
+      ],
+      "_links": {
+        "_self": "https://api.csdb.app/v1/profile/5580760",
+        "tracks": "https://api.csdb.app/v1/profile/5580760/tracks",
+        "works": "https://api.csdb.app/v1/profile/5580760/works",
+        "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=5580760",
+        "popular_works": "https://api.csdb.app/v1/popular/work?profile=5580760"
+      }
+    }
+  ]
+}
+```
+</details>
+
+
+---
+
+### {external_link_type}/tracks
+Returns several songs based on the ID of the respective external service
+
+**Parameters:**
+
+| Name | Type  | Description |
+| ---- | :---: | ------------|
+| `external_link_type` | _String_ | It can be: `isrc` `spotify` `youtube` `apple_music` `amazon_music` `deezer` |
+| `ids` | _String_ | List of IDs separated by commas. Maximum:  50 IDs |
+
+
+**Response:**
+
+| Type  |
+| :---: |
+| _Array&lt;[Track](#track)&gt;_ | 
+
+
+**Example:** [` api.csdb.app/v1/spotify/tracks?ids=1uoA57FMhP9QjZxIJZVEWo,4VvsTSxSSAu8IRBpt3iDMR,1V3HlCCSvHmKqvGSNuSL1e `](https://api.csdb.app/v1/spotify/tracks?ids=1uoA57FMhP9QjZxIJZVEWo,4VvsTSxSSAu8IRBpt3iDMR,1V3HlCCSvHmKqvGSNuSL1e)<br>
+
+<details>
+  <summary>Response</summary>
+
+```json
+{
+  "status": "ok",
+  "result": [
+    {
+      "id": 3165776,
+      "title": "Jeová Jireh",
+      "year": 2021,
+      "language": "por",
+      "isrc": "BXBKK2100090",
+      "bpm": "67",
+      "key": "G",
+      "time_sig": "4/4",
+      "duration": 389,
+      "references": [
+        {
+          "type": "artist",
+          "profile": {
+            "id": 5450607,
+            "name": "Aline Kistenmacker Barros dos Santos",
+            "alias": "Aline Barros",
+            "alias_author": "",
+            "type": "person",
+            "country": "BR",
+            "copyright": "",
+            "gospel": true,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/5450607",
+              "tracks": "https://api.csdb.app/v1/profile/5450607/tracks",
+              "works": "https://api.csdb.app/v1/profile/5450607/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=5450607",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=5450607"
+            }
+          }
+        }
+      ],
+      "works": [
+        {
+          "id": 8063427,
+          "title": "Jeová Jireh",
+          "year": 2021,
+          "language": "por",
+          "references": [
+            {
+              "type": "author",
+              "profile": {
+                "id": 6199575,
+                "name": "Samuel Messias Cabral",
+                "alias": "Samuel Messias",
+                "alias_author": "",
+                "type": "person",
+                "country": "BR",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/6199575",
+                  "tracks": "https://api.csdb.app/v1/profile/6199575/tracks",
+                  "works": "https://api.csdb.app/v1/profile/6199575/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=6199575",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=6199575"
+                }
+              }
+            }
+          ],
+          "_links": {
+            "_self": "https://api.csdb.app/v1/work/8063427",
+            "recordings": "https://api.csdb.app/v1/work/8063427/recordings",
+            "versions": "https://api.csdb.app/v1/work/8063427/versions",
+            "recordings_and_versions": "https://api.csdb.app/v1/work/8063427/recordings_and_versions",
+            "popular": "https://api.csdb.app/v1/popular/work"
+          }
+        }
+      ],
+      "external_links": [
+        {
+          "type": "youtube_video",
+          "id": "YyFd_dXy494",
+          "url": "https://www.youtube.com/watch?v=YyFd_dXy494"
+        },
+        {
+          "type": "spotify",
+          "id": "1uoA57FMhP9QjZxIJZVEWo",
+          "url": "https://open.spotify.com/track/1uoA57FMhP9QjZxIJZVEWo",
+          "uri": "spotify:track:1uoA57FMhP9QjZxIJZVEWo"
+        },
+        {
+          "type": "spotify_bt",
+          "id": "1HUdrBWYNNB1FdEjHZ4s53",
+          "url": "https://open.spotify.com/track/1HUdrBWYNNB1FdEjHZ4s53",
+          "uri": "spotify:track:1HUdrBWYNNB1FdEjHZ4s53"
+        },
+        {
+          "type": "youtube",
+          "id": "PxHCmlyNvhk",
+          "url": "https://music.youtube.com/watch?v=PxHCmlyNvhk"
+        },
+        {
+          "type": "youtube_bt",
+          "id": "FMacI8fHefw",
+          "url": "https://music.youtube.com/watch?v=FMacI8fHefw"
+        },
+        {
+          "type": "apple_music",
+          "id": "1604260568",
+          "url": "https://music.apple.com/br/song/1604260568"
+        },
+        {
+          "type": "amazon_music",
+          "id": "B09Q58XNGQ",
+          "url": "https://music.amazon.com.br/tracks/B09Q58XNGQ"
+        },
+        {
+          "type": "deezer",
+          "id": "1617019152",
+          "url": "https://www.deezer.com/track/1617019152",
+          "uri": "deezer://www.deezer.com/track/1617019152"
+        },
+        {
+          "type": "deezer_bt",
+          "id": "1617027062",
+          "url": "https://www.deezer.com/track/1617027062",
+          "uri": "deezer://www.deezer.com/track/1617027062"
+        },
+        {
+          "type": "letras_mus",
+          "id": "aline-barros/jeova-jireh",
+          "url": "https://www.letras.mus.br/aline-barros/jeova-jireh"
+        },
+        {
+          "type": "cifra_club",
+          "id": "aline-barros/jeova-jireh",
+          "url": "https://www.cifraclub.com.br/aline-barros/jeova-jireh"
+        }
+      ],
+      "_links": {
+        "_self": "https://api.csdb.app/v1/track/3165776",
+        "popular": "https://api.csdb.app/v1/popular/track"
+      }
+    },
+    {
+      "id": 9226281,
+      "title": "Bondade de Deus",
+      "year": 2022,
+      "language": "por",
+      "isrc": "BCII12200001",
+      "bpm": "68",
+      "key": "D",
+      "time_sig": "4/4",
+      "duration": 375,
+      "references": [
+        {
+          "type": "artist",
+          "profile": {
+            "id": 4721467,
+            "name": "Isaias Carlos Junior",
+            "alias": "Isaias Saad",
+            "alias_author": "",
+            "type": "person",
+            "country": "BR",
+            "copyright": "",
+            "gospel": true,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/4721467",
+              "tracks": "https://api.csdb.app/v1/profile/4721467/tracks",
+              "works": "https://api.csdb.app/v1/profile/4721467/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=4721467",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=4721467"
+            }
+          }
+        }
+      ],
+      "works": [
+        {
+          "id": 8947355,
+          "title": "Bondade de Deus",
+          "year": 2022,
+          "language": "por",
+          "derived_from": {
+            "id": 7269270,
+            "title": "Goodness Of God",
+            "language": "eng"
+          },
+          "references": [
+            {
+              "type": "author",
+              "profile": {
+                "id": 2365747,
+                "name": "Jason David Ingram",
+                "alias": "Jason Ingram",
+                "alias_author": "",
+                "type": "person",
+                "country": "US",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/2365747",
+                  "tracks": "https://api.csdb.app/v1/profile/2365747/tracks",
+                  "works": "https://api.csdb.app/v1/profile/2365747/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=2365747",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=2365747"
+                }
+              }
+            },
+            {
+              "type": "author",
+              "profile": {
+                "id": 7545720,
+                "name": "Jennifer Louise Johnson",
+                "alias": "Jenn Johnson",
+                "alias_author": "",
+                "type": "person",
+                "country": "US",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/7545720",
+                  "tracks": "https://api.csdb.app/v1/profile/7545720/tracks",
+                  "works": "https://api.csdb.app/v1/profile/7545720/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=7545720",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=7545720"
+                }
+              }
+            },
+            {
+              "type": "author",
+              "profile": {
+                "id": 5081677,
+                "name": "Benjamin David Fielding",
+                "alias": "Ben Fielding",
+                "alias_author": "",
+                "type": "person",
+                "country": "AU",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/5081677",
+                  "tracks": "https://api.csdb.app/v1/profile/5081677/tracks",
+                  "works": "https://api.csdb.app/v1/profile/5081677/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=5081677",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=5081677"
+                }
+              }
+            },
+            {
+              "type": "author",
+              "profile": {
+                "id": 3475062,
+                "name": "Edmond Martin Cash",
+                "alias": "Ed Cash",
+                "alias_author": "",
+                "type": "person",
+                "country": "US",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/3475062",
+                  "tracks": "https://api.csdb.app/v1/profile/3475062/tracks",
+                  "works": "https://api.csdb.app/v1/profile/3475062/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=3475062",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=3475062"
+                }
+              }
+            },
+            {
+              "type": "author",
+              "profile": {
+                "id": 2073892,
+                "name": "Brian Mark Johnson",
+                "alias": "Brian Johnson",
+                "alias_author": "",
+                "type": "person",
+                "country": "US",
+                "copyright": "",
+                "gospel": false,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/2073892",
+                  "tracks": "https://api.csdb.app/v1/profile/2073892/tracks",
+                  "works": "https://api.csdb.app/v1/profile/2073892/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=2073892",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=2073892"
+                }
+              }
+            }
+          ],
+          "_links": {
+            "_self": "https://api.csdb.app/v1/work/8947355",
+            "recordings": "https://api.csdb.app/v1/work/8947355/recordings",
+            "versions": "https://api.csdb.app/v1/work/8947355/versions",
+            "recordings_and_versions": "https://api.csdb.app/v1/work/8947355/recordings_and_versions",
+            "popular": "https://api.csdb.app/v1/popular/work"
+          }
+        }
+      ],
+      "external_links": [
+        {
+          "type": "youtube_video",
+          "id": "mZ9yZYo9Mmk",
+          "url": "https://www.youtube.com/watch?v=mZ9yZYo9Mmk"
+        },
+        {
+          "type": "spotify",
+          "id": "4VvsTSxSSAu8IRBpt3iDMR",
+          "url": "https://open.spotify.com/track/4VvsTSxSSAu8IRBpt3iDMR",
+          "uri": "spotify:track:4VvsTSxSSAu8IRBpt3iDMR"
+        },
+        {
+          "type": "youtube",
+          "id": "_ptnCyRScxY",
+          "url": "https://music.youtube.com/watch?v=_ptnCyRScxY"
+        },
+        {
+          "type": "apple_music",
+          "id": "1717152377",
+          "url": "https://music.apple.com/br/song/1717152377"
+        },
+        {
+          "type": "amazon_music",
+          "id": "B0DFZNPXZ8",
+          "url": "https://music.amazon.com.br/tracks/B0DFZNPXZ8"
+        },
+        {
+          "type": "deezer",
+          "id": "2192727777",
+          "url": "https://www.deezer.com/track/2192727777",
+          "uri": "deezer://www.deezer.com/track/2192727777"
+        },
+        {
+          "type": "letras_mus",
+          "id": "isaias-saad/bondade-de-deus",
+          "url": "https://www.letras.mus.br/isaias-saad/bondade-de-deus"
+        },
+        {
+          "type": "cifra_club",
+          "id": "isaias-saad/bondade-de-deus",
+          "url": "https://www.cifraclub.com.br/isaias-saad/bondade-de-deus"
+        }
+      ],
+      "_links": {
+        "_self": "https://api.csdb.app/v1/track/9226281",
+        "popular": "https://api.csdb.app/v1/popular/track"
+      }
+    },
+    {
+      "id": 4055834,
+      "title": "A Ele a Glória",
+      "year": 1999,
+      "language": "por",
+      "isrc": "BRMLH0400046",
+      "bpm": "76",
+      "key": "Em",
+      "time_sig": "4/4",
+      "duration": 593,
+      "references": [
+        {
+          "type": "artist",
+          "profile": {
+            "id": 6686102,
+            "alias": "Diante do Trono",
+            "alias_author": "",
+            "type": "group",
+            "country": "BR",
+            "copyright": "",
+            "gospel": true,
+            "_links": {
+              "_self": "https://api.csdb.app/v1/profile/6686102",
+              "tracks": "https://api.csdb.app/v1/profile/6686102/tracks",
+              "works": "https://api.csdb.app/v1/profile/6686102/works",
+              "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=6686102",
+              "popular_works": "https://api.csdb.app/v1/popular/work?profile=6686102"
+            }
+          }
+        }
+      ],
+      "works": [
+        {
+          "id": 3651970,
+          "title": "A Ele a Glória",
+          "year": 1999,
+          "language": "por",
+          "derived_from": {
+            "id": 3630518,
+            "title": "To Him Be Glory",
+            "language": "eng"
+          },
+          "references": [
+            {
+              "type": "author",
+              "profile": {
+                "id": 9265151,
+                "name": "Paul Kevin Jonas Sr.",
+                "alias": "Kevin Jonas",
+                "alias_author": "",
+                "type": "person",
+                "country": "US",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/9265151",
+                  "tracks": "https://api.csdb.app/v1/profile/9265151/tracks",
+                  "works": "https://api.csdb.app/v1/profile/9265151/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=9265151",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=9265151"
+                }
+              }
+            },
+            {
+              "type": "versionist",
+              "profile": {
+                "id": 6179930,
+                "name": "Ana Paula Machado Valadão Bessa",
+                "alias": "Ana Paula Valadão",
+                "alias_author": "",
+                "type": "person",
+                "country": "BR",
+                "copyright": "",
+                "gospel": true,
+                "_links": {
+                  "_self": "https://api.csdb.app/v1/profile/6179930",
+                  "tracks": "https://api.csdb.app/v1/profile/6179930/tracks",
+                  "works": "https://api.csdb.app/v1/profile/6179930/works",
+                  "popular_tracks": "https://api.csdb.app/v1/popular/track?profile=6179930",
+                  "popular_works": "https://api.csdb.app/v1/popular/work?profile=6179930"
+                }
+              }
+            }
+          ],
+          "_links": {
+            "_self": "https://api.csdb.app/v1/work/3651970",
+            "recordings": "https://api.csdb.app/v1/work/3651970/recordings",
+            "versions": "https://api.csdb.app/v1/work/3651970/versions",
+            "recordings_and_versions": "https://api.csdb.app/v1/work/3651970/recordings_and_versions",
+            "popular": "https://api.csdb.app/v1/popular/work"
+          }
+        }
+      ],
+      "external_links": [
+        {
+          "type": "youtube_video",
+          "id": "Q_MerFW9qA4",
+          "url": "https://www.youtube.com/watch?v=Q_MerFW9qA4"
+        },
+        {
+          "type": "spotify",
+          "id": "1V3HlCCSvHmKqvGSNuSL1e",
+          "url": "https://open.spotify.com/track/1V3HlCCSvHmKqvGSNuSL1e",
+          "uri": "spotify:track:1V3HlCCSvHmKqvGSNuSL1e"
+        },
+        {
+          "type": "youtube",
+          "id": "_QbHjK5vrcw",
+          "url": "https://music.youtube.com/watch?v=_QbHjK5vrcw"
+        },
+        {
+          "type": "apple_music",
+          "id": "1540941938",
+          "url": "https://music.apple.com/br/song/1540941938"
+        },
+        {
+          "type": "amazon_music",
+          "id": "B0DFZ9HMF4",
+          "url": "https://music.amazon.com.br/tracks/B0DFZ9HMF4"
+        },
+        {
+          "type": "deezer",
+          "id": "1145523072",
+          "url": "https://www.deezer.com/track/1145523072",
+          "uri": "deezer://www.deezer.com/track/1145523072"
+        },
+        {
+          "type": "letras_mus",
+          "id": "diante-do-trono/porque-dele-e-por-ele",
+          "url": "https://www.letras.mus.br/diante-do-trono/porque-dele-e-por-ele"
+        },
+        {
+          "type": "cifra_club",
+          "id": "diante-do-trono/a-ele-gloria",
+          "url": "https://www.cifraclub.com.br/diante-do-trono/a-ele-gloria"
+        }
+      ],
+      "_links": {
+        "_self": "https://api.csdb.app/v1/track/4055834",
+        "popular": "https://api.csdb.app/v1/popular/track"
+      }
+    }
+  ]
+}
+```
+</details>
+
+
+---
+
 ### popular/profile
 Returns the list of popular profiles
 
@@ -2457,6 +4232,7 @@ Search for a song by name
 | `bpm` | _Number_ | BPM |
 | `key` | _Number_ | Tone.<br>It can be: `C` `C#` `Db` `D` `D#` `Eb` `E` `F` `F#` `Gb` `G` `G#` `Ab` `A` `A#` `Bb` `B` `Cm` `C#m` `Dbm` `Dm` `D#m` `Ebm` `Em` `Fm` `F#m` `Gbm` `Gm` `G#m` `Abm` `Am` `A#m` `Bbm` `Bm` |
 | `time_sig` | _Number_ | Music time.<br>It can be: `2/2` `2/4` `3/4` `4/4` `5/4` `6/4` `3/8` `6/8` `7/8` `9/8` `12/8` |
+| `duration` | _Number_ | Duration of the song (in seconds). |
 | `references` | _Array&lt;[TrackReference](#trackreference)&gt;_ | Music references (artists, for example) |
 | `works` | _Array&lt;[Work](#work)&gt;_ | Work(s) used in the recording |
 | `external_links` | _Array&lt;[ExternalLink](#externallink)&gt;_ | External links of the song |
