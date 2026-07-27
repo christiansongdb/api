@@ -9,9 +9,6 @@ Christian Song Database (CSDB) is a public and open database of evangelical song
 Stores the id/link of a song across different streaming services, maintaining the correct version compatible with each recording, reducing the risk of the song version in one streaming link being different from the song version in another streaming.<br>
 It also stores information about the songwriters, as well as relationships that may be interesting, such as the list of compositions by a particular person, the list of songs that use the same composition, what the original composition is when a song is translated from another language, etc.
 
-Database download in csv format available at [files/database.zip](files/database.zip)<br/>
-Whenever possible, we recommend accessing the data through the API, as the data is regularly updated/corrected.
-
 ---
 
 To use the API, an authorization token is required<br/>
