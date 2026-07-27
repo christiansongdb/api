@@ -9,9 +9,6 @@ Christian Song Database (CSDB) é um banco de dados público e aberto de música
 Armazena o id/link de uma música em diferentes serviços de streamings, mantendo a versão correta compatível com cada gravação, diminuindo o risco da versão da música no link de um streaming ser diferente da versão da música em outro streaming.<br>
 Armazena também informação dos compositores da música, além de relacionamentos que podem ser interessantes, como a lista de composições de uma determinada pessoa, a lista de músicas que usam a mesma composição, qual é a composição original quando é uma música traduzida de outro idioma, etc.
 
-Download do banco de dados em formato csv disponível em [files/database.zip](files/database.zip)<br/>
-Sempre que possível, recomendamos o acesso aos dados pela API, pois os dados são regularmente atualizados/corrigidos.
-
 ---
 
 Para utilização da API é necessário um token de autorização<br/>
